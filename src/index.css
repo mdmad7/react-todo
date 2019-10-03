@@ -1,13 +1,64 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Fira Code', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.TodoForm {
+  height: 50px;
+  max-width: 510px;
+}
+
+.TodoForm input {
+  height: inherit;
+  min-width: 440px;
+  outline: none;
+  padding: 0 1rem;
+}
+
+.TodoForm button {
+  font-family: 'Fira Code', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  padding: 1rem;
+  display: inline-block;
+  border: none;
+  height: inherit;
+  background-color: cornflowerblue;
+  color: white;
+  max-width: 50px;
+  margin-left: 10px;
+}
+
+.TodoList {
+  min-width: 500px;
+  margin-top: 10px;
+  height: 300px;
+  overflow: auto;
+}
+
+.TodoItem {
+  padding: 15px 40px;
+  border-bottom: 1px solid #e6e6e6;
+  transition: 0.3s ease-in;
+}
+
+.TodoItem:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 30px #cfcfcf;
 }

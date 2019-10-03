@@ -10,7 +10,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className='App'>
       <TodoForm handleSubmit={handleSubmit} />
       <TodoList todos={todos} />
     </div>

@@ -5,11 +5,12 @@ const TodoForm = props => {
   const [todo, setTodo] = useState('')
   const submitTodo = e => {
     e.preventDefault()
-    handleSubmit({ id: Date.now(), title: todo, completed: false })
+    todo.trim().length > 0 &&
+      handleSubmit({ id: Date.now(), title: todo, completed: false })
     setTodo('')
   }
   return (
-    <form>
+    <form className='TodoForm'>
       <input value={todo} onChange={e => setTodo(e.target.value)} />
       <button onClick={submitTodo}>Add</button>
     </form>
