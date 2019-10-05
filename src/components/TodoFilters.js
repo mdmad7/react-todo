@@ -1,13 +1,13 @@
 import React from 'react'
 
-const TodoFilters = ({ todosFilter, setFilter }) => {
+const TodoFilters = ({ filterTodos, todosFilter }) => {
   return (
     <div className='TodoFilters'>
       <label>
         <input
           type='radio'
           checked={todosFilter === 'completed' ? true : false}
-          onChange={() => setFilter('completed')}
+          onChange={() => filterTodos('completed')}
         />
         Completed
       </label>
@@ -17,7 +17,7 @@ const TodoFilters = ({ todosFilter, setFilter }) => {
           type='radio'
           value='uncomplete'
           checked={todosFilter === 'uncomplete' ? true : false}
-          onChange={() => setFilter('uncomplete')}
+          onChange={() => filterTodos('uncomplete')}
         />
         Uncomplete{' '}
       </label>
@@ -27,7 +27,7 @@ const TodoFilters = ({ todosFilter, setFilter }) => {
           type='radio'
           value='all'
           checked={todosFilter === 'all' ? true : false}
-          onChange={() => setFilter('all')}
+          onChange={() => filterTodos('all')}
         />
         All{' '}
       </label>
